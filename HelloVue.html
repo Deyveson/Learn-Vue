@@ -37,6 +37,12 @@
         <button v-on:click="reverseMessage">Reverse Message</button>
   </div>
 
+
+  <div id="app-6">
+    <input v-model="message">
+    <p>{{ message }}</p>
+  </div>
+
   <script>
 
     var app = new Vue({
@@ -89,6 +95,13 @@
             }
         }
     })
+
+    var app6 = new Vue({
+    el: '#app-6',
+        data: {
+            message: 'Hello Vue!'
+        }
+    })
     
   </script>
 
@@ -102,6 +115,10 @@
     #desc{
         font-size: 20px;
         color: black
+    }
+
+    #app-6{
+        margin-top: 10px
     }
 
 </style>
